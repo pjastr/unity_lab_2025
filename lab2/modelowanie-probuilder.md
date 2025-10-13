@@ -1,0 +1,115 @@
+# Podstawy modelowania w Probuilderze
+
+
+# Modelowanie
+
+Modelowanie w kontekście technologii multimedialnych, szczególnie w
+środowisku Unity, obejmuje tworzenie cyfrowych reprezentacji obiektów,
+postaci oraz środowisk, które są wykorzystywane w grach, symulacjach,
+aplikacjach VR/AR i innych projektach multimedialnych. Proces ten jest
+kluczowy do budowy interaktywnych i realistycznych scen, ponieważ modele
+3D stanowią podstawę wizualną i funkcjonalną tych aplikacji.
+
+# Obiekty gry (ang. gameobject)
+
+Obiekt gry (ang. GameObject) w Unity to podstawowy element, z którego
+zbudowana jest każda scena w grze. Jest to kontener dla komponentów,
+które definiują zachowanie i właściwości obiektu w grze. Obiekty gry
+mogą być organizowane hierarchicznie, tworząc strukturę rodzic-dziecko.
+
+![](images/p4.png)
+
+Transform w Unity jest komponentem, który przechowuje i zarządza
+pozycją, rotacją oraz skalą obiektu w świecie 3D lub 2D.
+
+Mesh Filter w Unity jest komponentem, który służy do przechowywania
+siatki (mesh) modelu 3D i przekazywania jej do renderera, aby mógł
+wyświetlić obiekt w grze. Jest to podstawowy element pracy z obiektami
+3D w Unity, ponieważ pozwala na przypisanie modelu 3D do obiektu w
+scenie.
+
+Mesh Renderer w Unity jest komponentem odpowiedzialnym za renderowanie
+(wyświetlanie) obiektów 3D w scenie. Działa on w połączeniu z
+komponentem Mesh Filter, który dostarcza mu siatkę (mesh) obiektu do
+wyrenderowania. Mesh Renderer zajmuje się stosowaniem materiałów,
+tekstur oraz innych efektów wizualnych, aby siatka była widoczna w grze.
+
+Collider w Unity jest komponentem fizycznym, który definiuje kształt
+obiektu 3D lub 2D używany do wykrywania kolizji. Jest niezbędny do
+interakcji fizycznych w grze, takich jak kolizje między obiektami,
+wykrywanie wejścia gracza na platformę lub reagowanie na ataki. Collider
+działa razem z innymi komponentami fizycznymi, takimi jak Rigidbody, aby
+symulować realistyczne interakcje w świecie gry.
+
+# Probuilder
+
+Instalacja opisana jest tutaj
+https://docs.unity3d.com/Packages/com.unity.probuilder@4.0/manual/installing.html
+
+Dla projektów URP i HDRP trzeba zainstalować jednej z sampli.
+
+![](images/p5.png)
+
+## Prymitywy
+
+<https://docs.unity3d.com/Packages/com.unity.probuilder@6.0/manual/Arch.html>
+
+- Łuk
+- Stożek
+- Sześcian
+- Walec
+- Drzwi
+- Rura
+- Płaszczyzna
+- Pryzmat
+- Kula
+- Sprite
+- Schody
+- Torus
+
+## Lista akcji
+
+<https://docs.unity3d.com/Packages/com.unity.probuilder@6.0/manual/ref_actions.html>
+
+## Różne porady
+
+<https://docs.unity3d.com/Packages/com.unity.probuilder@6.0/manual/workflow-edit-tips.html#tjoint>
+
+1.  **Zarządzanie geometrią**:
+    - Staraj się unikać skomplikowanej geometrii, która może powodować
+      błędy w renderowaniu lub kłopoty podczas edycji.
+    - Korzystaj z opcji optymalizacji i upraszczania geometrii, aby
+      zapewnić płynne działanie w edytorze.
+2.  **Unikanie “T-Jointów”**:
+    - Tzw. “T-Jointy” (łączenia w kształcie litery “T”) mogą powodować
+      artefakty graficzne i problemy z renderowaniem.
+    - Staraj się, aby krawędzie obiektów zawsze stykały się w sposób
+      bezpośredni i unikały tworzenia takich łączeń.
+3.  **Korzystanie z narzędzi do przekształcania**:
+    - Wykorzystuj narzędzia przekształcania (skalowania, przesuwania,
+      obracania) dostępne w ProBuilderze, aby precyzyjnie dopasować
+      kształty do pożądanych proporcji i pozycji.
+    - Pamiętaj o korzystaniu z trybów pracy w przestrzeni lokalnej oraz
+      globalnej w zależności od potrzeb.
+4.  **Praca z materiałami**:
+    - Używaj funkcji przypisywania materiałów w ProBuilderze, aby
+      upewnić się, że każdy element modelu ma przypisany odpowiedni
+      materiał.
+    - Pamiętaj o opcji szybkiego przypisywania tekstur za pomocą funkcji
+      „Material Editor” w ProBuilderze.
+5.  **Unikanie niepotrzebnych krawędzi i wierzchołków**:
+    - Usuwaj zbędne krawędzie i wierzchołki, które mogą powodować
+      nadmierne złożoności geometrii i spowalniać proces edycji.
+    - Korzystaj z narzędzi do „Weldowania” (łączenia) wierzchołków, aby
+      utrzymać czystą topologię siatki.
+6.  **Optymalizacja UV**:
+    - Pamiętaj o ręcznej optymalizacji mapowania UV, aby tekstury były
+      prawidłowo wyświetlane na modelach.
+    - Korzystaj z narzędzi do automatycznego rozkładania UV, ale zawsze
+      sprawdzaj ich wynik i w razie potrzeby dostosuj ręcznie.
+7.  **Częsta kontrola modelu**:
+    - Regularnie sprawdzaj swój model z różnych perspektyw, aby upewnić
+      się, że nie ma błędów ani deformacji.
+    - Wykorzystuj opcję podglądu w trybie „Shaded Wireframe” (cieniowany
+      widok z siatką), aby dokładnie ocenić rozmieszczenie krawędzi i
+      wierzchołków.

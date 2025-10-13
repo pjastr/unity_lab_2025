@@ -10,6 +10,8 @@ Probuilder a kodowanie
 
 https://docs.unity3d.com/Packages/com.unity.probuilder@6.0/manual/api.html
 
+[probuilder-kodowanie.md](probuilder-kodowanie.md)
+
 ## Zadanie dodatkowe (1-2pkt)
 
 - Stwórz scenę (może być nowy projekt lub dotychczasowy) w którym

@@ -171,6 +171,8 @@ możliwości CharacterController.
 Wykorzystanie śledzenia promieni (Physics Raycast) zamiast klasycznych
 triggerów/kolizji.
 
+<https://docs.unity3d.com/6000.2/Documentation/ScriptReference/Physics.Raycast.html>
+
 Przykładowy skrypt:
 
 ``` csharp

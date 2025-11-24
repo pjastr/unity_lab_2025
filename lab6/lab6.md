@@ -200,12 +200,13 @@ Website: <link="https://www.illumitech.com">illumitech.com</link> | Downloaded o
 
 ![](images/f8.png)
 
-- Dodaj skrypt nadający kliklność linków:
+- Dodaj skrypt nadający kliklność linków (**wersja poprawiona**):
 
 ``` csharp
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class CreditsLinkHandler : MonoBehaviour, IPointerClickHandler
 {
@@ -218,8 +219,10 @@ public class CreditsLinkHandler : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        // Znajdowanie klikniętego linku
-        int linkIndex = TMP_TextUtilities.FindIntersectingLink(textMeshPro, Input.mousePosition, null);
+        Vector2 mousePosition = Mouse.current.position.ReadValue();
+
+        int linkIndex = TMP_TextUtilities.FindIntersectingLink(textMeshPro, mousePosition, null);
+
         if (linkIndex != -1)
         {
             TMP_LinkInfo linkInfo = textMeshPro.textInfo.linkInfo[linkIndex];
